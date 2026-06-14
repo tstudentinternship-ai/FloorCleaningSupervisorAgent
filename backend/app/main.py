@@ -6,6 +6,12 @@ app = FastAPI()
 
 app.include_router(scan_routes.router)
 app.include_router(auth_routes.router)
+app.include_router(checkpoint_routes.router)
+app.include_router(review_routes.router)
+print(app.routes)
+print("Checkpoint router loaded")app.include_router(store_routes.router)
+app.include_router(settings_routes.router)
+app.include_router(tag_routes.router)
 
 @app.get("/test-db")
 def test_db():
