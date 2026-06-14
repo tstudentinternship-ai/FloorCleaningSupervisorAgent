@@ -1,12 +1,14 @@
 from fastapi import FastAPI 
-from app.routes import scan_routes, auth_routes
+from app.routes import scan_routes, auth_routes,checkpoint_routes
 from app.core.database import checkpoints_container
 
 app = FastAPI()
 
 app.include_router(scan_routes.router)
 app.include_router(auth_routes.router)
-
+app.include_router(checkpoint_routes.router)
+print(app.routes)
+print("Checkpoint router loaded")
 @app.get("/test-db")
 def test_db():
     try:
@@ -14,3 +16,6 @@ def test_db():
         return {"status": "connected","count":len(items)}
     except Exception as e:
         return {"error":str(e)}
+@app.get("/abhishek-test")
+def test():
+    return {"message": "working"}
