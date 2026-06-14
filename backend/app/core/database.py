@@ -18,3 +18,8 @@ scan_container=db.create_container_if_not_exists(
     partition_key=PartitionKey(path="/store_id")
 )
 
+users_container=db.create_container_if_not_exists(
+    id="USERS",
+    partition_key=PartitionKey(path="/user_id")
+)
+

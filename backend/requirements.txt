@@ -3,3 +3,4 @@ uvicorn
 azure-cosmos
 python-dotenv
 pydantic
+passlib[bcrypt]

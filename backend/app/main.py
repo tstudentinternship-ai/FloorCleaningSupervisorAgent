@@ -1,10 +1,11 @@
 from fastapi import FastAPI 
-from app.routes import scan_routes
+from app.routes import scan_routes, auth_routes
 from app.core.database import checkpoints_container
 
-app=FastAPI()
+app = FastAPI()
 
 app.include_router(scan_routes.router)
+app.include_router(auth_routes.router)
 
 @app.get("/test-db")
 def test_db():
