@@ -13,13 +13,27 @@ checkpoints_container=db.create_container_if_not_exists(
     partition_key=PartitionKey(path="/store_id")
 )
 
-scan_container=db.create_container_if_not_exists(
-    id="scan_events",
-    partition_key=PartitionKey(path="/store_id")
-)
-
 users_container=db.create_container_if_not_exists(
     id="USERS",
     partition_key=PartitionKey(path="/user_id")
 )
 
+stores_container = db.create_container_if_not_exists(
+    id="stores",
+    partition_key=PartitionKey(path="/id")
+)
+
+tags_container = db.create_container_if_not_exists(
+    id="tags",
+    partition_key=PartitionKey(path="/store_id")
+)
+
+settings_container = db.create_container_if_not_exists(
+    id="settings",
+    partition_key=PartitionKey(path="/id")
+)
+
+scan_container=db.create_container_if_not_exists(
+    id="scan",
+    partition_key=PartitionKey(path="/store_id")
+)
