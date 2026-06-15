@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.schemas.tag import(
+from app.schemas.tag_schema import(
     RegisterTagRequest,
     AssignTagRequest
 )
