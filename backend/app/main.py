@@ -9,7 +9,7 @@ app.include_router(auth_routes.router)
 app.include_router(checkpoint_routes.router)
 app.include_router(review_routes.router)
 print(app.routes)
-print("Checkpoint router loaded")app.include_router(store_routes.router)
+app.include_router(store_routes.router)
 app.include_router(settings_routes.router)
 app.include_router(tag_routes.router)
 
@@ -20,6 +20,4 @@ def test_db():
         return {"status": "connected","count":len(items)}
     except Exception as e:
         return {"error":str(e)}
-@app.get("/abhishek-test")
-def test():
-    return {"message": "working"}
+

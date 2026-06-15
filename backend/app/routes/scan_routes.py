@@ -4,7 +4,7 @@ from app.services.scan_service import process_scan
 
 router = APIRouter()
 
-@router.post("\scan")
+@router.post("/scan")
 
 def scan(data: ScanRequest):
     return process_scan(data)

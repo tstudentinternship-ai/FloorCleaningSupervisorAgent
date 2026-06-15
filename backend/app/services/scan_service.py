@@ -3,7 +3,7 @@ from datetime import datetime
 import uuid
 
 def process_scan(data):
-    query = f"SELECT * FROM WHERE c.nfc_tag_uid=`{data.nfc_tag_uid}`"
+    query = f"SELECT * FROM c WHERE c.nfc_tag_uid = '{data.nfc_tag_uid}'"
     items = list(checkpoints_container.query_items(query,enable_cross_partition_query=True))
 
     if not items:

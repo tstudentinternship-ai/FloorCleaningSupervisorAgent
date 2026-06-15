@@ -5,7 +5,7 @@ class RegisterRequest(BaseModel):
     user_id: str
     name: str
     email: str
-    password_hash: str
+    password: str
     role: str
     store_id: str
 
