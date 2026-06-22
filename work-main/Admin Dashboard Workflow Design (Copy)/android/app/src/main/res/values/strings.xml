@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CleanCheck</string>
+    <string name="title_activity_main">CleanCheck</string>
+    <string name="package_name">com.CleanCheck.app</string>
+    <string name="custom_url_scheme">com.CleanCheck.app</string>
+</resources>
