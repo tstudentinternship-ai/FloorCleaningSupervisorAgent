@@ -1,2 +1,0 @@
-# FloorCleaningSupervisorAgent
-FloorCleaningSupervisorAgent assistance
